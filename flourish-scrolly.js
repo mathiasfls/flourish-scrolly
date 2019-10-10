@@ -4,7 +4,7 @@ function initStories() {
 	for (var i = 0; i < stories.length; i++) {
 		var story = stories[i],
 		    id = story.dataset.src.split("/")[1],
-		    h = story.getAttribute("data-height"),
+		    h = story.getAttribute("data-height") || "75vh",
 		    last_link = last_link_per_story["story-" + id],
 		    common_parent = commonAncestor(story, last_link);
 
