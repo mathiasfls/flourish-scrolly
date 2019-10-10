@@ -4,7 +4,7 @@
   "description": "Library to allow Flourish scrollytelling in any web page without coding",
   "main": "flourish-scrolly.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "uglifyjs -c -m -o flourish-scrolly.min.js flourish-scrolly.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kiln/flourish-scrolly/issues"
   },
-  "homepage": "https://github.com/kiln/flourish-scrolly#readme"
+  "homepage": "https://github.com/kiln/flourish-scrolly#readme",
+  "devDependencies": {
+    "uglify": "^0.1.5"
+  }
 }

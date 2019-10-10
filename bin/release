@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -ex
+
+cd "$( dirname "${BASH_SOURCE[0]}" )/.."
+
+PACKAGE=flourish-scrolly
+
+version=$(jq -r .version < package.json)
+
+npm run build
+
+../cdn.flourish.rocks/bin/release "$PACKAGE" "$version" \
+    flourish-scrolly-v%s.js flourish-scrolly.js \
+    flourish-scrolly-v%s.min.js flourish-scrolly.min.js \
