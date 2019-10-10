@@ -68,8 +68,8 @@ function initLinks() {
 }
 
 function initIntersection() {
-	var observer = new IntersectionObserver((entries, observer) => {
-		entries.forEach(entry => {
+	var observer = new IntersectionObserver(function(entries, observer) {
+		entries.forEach(function(entry) {
 			if (entry.isIntersecting) updateStoryFromLink(entry.target);
 		});
 	}, { rootMargin: "0px 0px -50% 0px" });
